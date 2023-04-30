@@ -117,6 +117,12 @@ class MonitorControl:
     def toggle_kvm(self):
         self.set_kvm_status(1 - self.get_kvm_status())
 
+    def switch_to_hdmi_1(self):
+        m.set_osd([0xe0, 0x2d, 0x00])
+
+    def switch_to_display_port(self):
+        m.set_osd([0xe0, 0x2d, 0x02])
+
 
 # Test
 if __name__ == "__main__":
